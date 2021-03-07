@@ -1,12 +1,13 @@
 # Setup RPi: https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/installing-software
 
-from adafruit_motorkit import MotorKit
 import time
+import board
+from adafruit_motorkit import MotorKit
 
 
 class Glove:
     def __init__(self):
-        self.kit = MotorKit()
+        self.kit = MotorKit(i2c=board.I2C())
         # MotorKit: motor1, motor2, motor3, motor4
         self.top_fingers = self.kit.motor1
         self.top_thumb = self.kit.motor2
@@ -14,6 +15,7 @@ class Glove:
         self.bottom_thumb = self.kit.motor4
         self.tighten = True
         self.loosen = False
+        self.sensor_port = 0  # For Ultrasonic sensor
         # Driving any motors +ve will tighten the string they are attached to and vice versa
 
     def gripObject(self, time_to_grip=1):
@@ -33,19 +35,31 @@ class Glove:
         self._haltAfter(time_to_grip)
 
     def _move_top_fingers(self, tighten=True):
-        multiplier = 1 if tighten is True else multiplier = -1
+        if tighten is True:
+            multiplier = 1
+        else:
+            multiplier = -1
         self.top_fingers.throttle = multiplier*0.5
 
     def _move_bottom_fingers(self, tighten=True):
-        multiplier = 1 if tighten is True else multiplier = -1
+        if tighten is True:
+            multiplier = 1
+        else:
+            multiplier = -1
         self.top_fingers.throttle = multiplier*0.5
 
     def _move_top_thumb(self, tighten=True):
-        multiplier = 1 if tighten is True else multiplier = -1
+        if tighten is True:
+            multiplier = 1
+        else:
+            multiplier = -1
         self.top_fingers.throttle = multiplier*0.5
 
     def _move_bottom_thumb(self, tighten=True):
-        multiplier = 1 if tighten is True else multiplier = -1
+        if tighten is True:
+            multiplier = 1
+        else:
+            multiplier = -1
         self.top_fingers.throttle = multiplier*0.5
 
     def _haltAfter(self, num_secs):

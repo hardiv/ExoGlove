@@ -26,11 +26,9 @@ def reset():
 
 def take_photo(time_delay=1):
     global image_count
-    camera.start_preview()
-    filename = 'assets/testing/image%s.jpg' % image_count
+    filename = '../assets/testing/image%s.jpg' % image_count
     camera.capture(filename)
     sleep(time_delay)
-    camera.stop_preview()
     image_count += 1
     return filename
 

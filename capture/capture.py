@@ -13,6 +13,6 @@ GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # Set pin 10 to be an input
 
 count = 0  # Test
 while True:  # Run forever
-    if GPIO.input(10) == GPIO.HIGH:
+    if GPIO.input(10) == GPIO.HIGH: # Test 2
         print("Taking photo: ", count)
         camera.take_photo()

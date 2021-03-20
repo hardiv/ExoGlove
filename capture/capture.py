@@ -16,3 +16,4 @@ while True:  # Run forever
     if GPIO.input(10) == GPIO.HIGH:  # Test 2
         print("Taking photo: ", count)
         take_photo()
+        count += 1

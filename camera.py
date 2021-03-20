@@ -19,6 +19,11 @@ sleep(5)
 camera.stop_preview()
 
 
+def reset():
+    global image_count
+    image_count = 0
+
+
 def take_photo(time_delay=1):
     global image_count
     camera.start_preview()

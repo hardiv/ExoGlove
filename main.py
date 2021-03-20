@@ -1,6 +1,6 @@
 # import glove
 from classify import classifier
-# import camera
+import camera
 from datetime import datetime
 
 # g = glove.Glove()
@@ -8,8 +8,8 @@ grabbable_objects = ['Cup', 'Handle', 'Bottle']
 # grabbable_objects = ['Red', 'Green', 'Yellow', 'Not a']
 
 
-def isGripNeeded(photo_file_path):
-    # photo_file_path = camera.take_photo()
+def isGripNeeded():
+    photo_file_path = camera.take_photo()
     photo_class, confidence = classifier.classify(photo_file_path)  # svm by own dataset
     print(photo_class)
     if photo_class in grabbable_objects:
@@ -25,4 +25,4 @@ while True:
         g.relax()
 '''
 
-print(isGripNeeded('assets/testing/image1.png'))
+print(isGripNeeded())

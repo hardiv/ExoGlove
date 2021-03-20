@@ -9,7 +9,7 @@ video_count = 0
 camera.rotation = 0
 # camera.resolution = (2592, 1944) - maximum
 # camera.resolution = (64, 64) - minimum
-camera.resolution = (264, 264)
+camera.resolution = (64, 64)
 camera.framerate = 15
 # camera.image_effect = 'film' - grayscale
 

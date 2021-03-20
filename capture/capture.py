@@ -15,4 +15,4 @@ count = 0  # Test
 while True:  # Run forever
     if GPIO.input(10) == GPIO.HIGH: # Test 2
         print("Taking photo: ", count)
-        camera.take_photo()
+        take_photo()

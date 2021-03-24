@@ -1,4 +1,4 @@
-# import glove
+import glove
 from classify import classifier
 import camera
 from datetime import datetime

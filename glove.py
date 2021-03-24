@@ -46,21 +46,21 @@ class Glove:
             multiplier = 1
         else:
             multiplier = -1
-        self.top_fingers.throttle = multiplier*0.5
+        self.bottom_fingers.throttle = multiplier*0.5
 
     def _move_top_thumb(self, tighten=True):
         if tighten is True:
             multiplier = 1
         else:
             multiplier = -1
-        self.top_fingers.throttle = multiplier*0.5
+        self.top_thumb.throttle = multiplier*0.5
 
     def _move_bottom_thumb(self, tighten=True):
         if tighten is True:
             multiplier = 1
         else:
             multiplier = -1
-        self.top_fingers.throttle = multiplier*0.5
+        self.bottom_thumb.throttle = multiplier*0.5
 
     def _haltAfter(self, num_secs):
         time.sleep(num_secs)

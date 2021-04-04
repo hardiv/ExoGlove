@@ -29,7 +29,7 @@ def reset():
 
 def take_photo(time_delay=1):
     global image_count
-    filename = 'assets/testing/image%s.jpg' % image_count
+    filename = str(parentdir) + 'assets/testing/image%s.jpg' % image_count
     # filename = '/home/pi/Pictures/image%s.jpg' % image_count
     camera.capture(filename)
     sleep(time_delay)

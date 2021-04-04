@@ -1,6 +1,5 @@
-import glove
 from classify import classifier
-import camera
+from capture import camera
 from datetime import datetime
 
 # g = glove.Glove()

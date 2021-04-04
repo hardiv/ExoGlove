@@ -18,7 +18,7 @@ camera.rotation = 0
 # camera.resolution = (2592, 1944) - maximum
 # camera.resolution = (64, 64) - minimum
 camera.resolution = (256, 256)
-camera.framerate = 15
+# camera.framerate = 15
 # camera.image_effect = 'film' - grayscale
 
 

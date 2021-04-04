@@ -11,5 +11,5 @@ count = 0  # Test
 while True:  # Run forever
     if GPIO.input(10) == GPIO.HIGH:  # Test 2
         print(f'Taking photo: {count}')
-        print(f'Photo saved in location {camera.take_photo(0.1)}')
+        print(f'Photo saved in location {camera.take_photo(0.05)}')
         count += 1

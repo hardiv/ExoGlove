@@ -26,3 +26,4 @@ while True:  # Run forever
         print(f'Taking photo: {count}')
         print(f'Photo saved in location {camera.take_photo(0.05)}')
         count += 1
+

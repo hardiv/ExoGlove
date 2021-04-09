@@ -1,8 +1,8 @@
 import camera
 import RPi.GPIO as GPIO
 
-pushbutton = 17
-input = 4
+pushbutton = 11
+input = 7
 
 
 def buttonPressed(pin_number):

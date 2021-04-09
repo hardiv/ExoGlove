@@ -19,7 +19,7 @@ GPIO.setup(pushbutton, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # Set pin 10 to be 
 GPIO.setup(supply, GPIO.OUT)
 # low (off)
 
-switchOn(input)
+switchOn(supply)
 count = 0  # Test
 while True:  # Run forever
     if buttonPressed(pushbutton):  # Test 2

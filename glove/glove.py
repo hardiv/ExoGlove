@@ -15,7 +15,7 @@ class Glove:
         self.bottom_thumb = self.kit.motor4
         self.tighten = True
         self.loosen = False
-        self.sensor_port = 0  # For Ultrasonic sensor
+        self.ultrasonic = 0  # For Ultrasonic sensor
         # Driving any motors +ve will tighten the string they are attached to and vice versa
 
     def gripObject(self, time_to_grip=1):
@@ -62,6 +62,19 @@ class Glove:
             multiplier = -1
         self.bottom_thumb.throttle = multiplier*0.5
 
+    def getDist(self):
+        sensor = self.ultrasonic
+        pass
+
     def _haltAfter(self, num_secs):
         time.sleep(num_secs)
         self.top_fingers.throttle = 0
+
+
+# Unit testing for hardware
+if __name__ == "__main__":
+    glove = Glove()
+    print("Tightening")
+    glove.gripObject()
+    print("Loosening")
+    glove.relax()

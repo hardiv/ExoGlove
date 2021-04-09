@@ -17,5 +17,5 @@ def isGripNeeded():
     print(photo_class)
     if photo_class in grabbable_objects:
         with open("tracking/activity.txt", "a") as activity_file:
-            activity_file.write("\nPicked up a " + photo_class + " at " + format_date(datetime.now()) + ".")
+            activity_file.write("\nPicked up a " + photo_class + " at " + format_date(str(datetime.now())) + ".")
         return True

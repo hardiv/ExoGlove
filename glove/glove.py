@@ -12,6 +12,8 @@ GPIO.setmode(GPIO.BCM)
 # set GPIO Pins
 GPIO_TRIGGER = 27
 GPIO_ECHO = 22
+GPIO.setup(GPIO_ECHO, GPIO.IN)
+GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # Set pin 10 to be an input pin and set initial value to be pulled
 GPIO.setup(18, GPIO.OUT)
 

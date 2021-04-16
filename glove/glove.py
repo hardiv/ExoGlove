@@ -108,7 +108,7 @@ if __name__ == "__main__":
     glove.relax()
     try:
         while True:
-            dist = distance()
+            dist = glove.getDist()
             print("Measured Distance = %.1f cm" % dist)
             time.sleep(1)
     # Reset by pressing CTRL + C

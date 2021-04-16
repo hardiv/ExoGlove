@@ -87,10 +87,12 @@ class Glove:
         # save StartTime
         while GPIO.input(GPIO_ECHO) == 0:
             StartTime = time.time()
+            print(GPIO.input(GPIO_ECHO))
         # save time of arrival
         print("Exited loop 1")
         while GPIO.input(GPIO_ECHO) == 1:
             StopTime = time.time()
+            print(GPIO.input(GPIO_ECHO))
         print("Exited loop 2")
         # time difference between start and arrival
         TimeElapsed = StopTime - StartTime

@@ -51,9 +51,9 @@ def classify(image_to_test):
 	image_label = "Other"
 	if highest_confidence == red_confidence:
 		image_label = "Cup"
-	# elif highest_confidence == green_confidence:
-	# 	image_label = "Green"
-	# elif highest_confidence == yellow_confidence:
-	# 	image_label = "Yellow"
+	elif highest_confidence == green_confidence:
+		image_label = "Handle"
+	elif highest_confidence == yellow_confidence:
+		image_label = "Bottle"
 
 	return image_label, highest_confidence

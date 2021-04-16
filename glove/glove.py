@@ -77,6 +77,7 @@ class Glove:
 
     def getDist(self):
         print("Getting Distance...")
+        return 3
         # set Trigger to HIGH
         GPIO.output(GPIO_TRIGGER, True)
         # set Trigger after 0.01ms to LOW

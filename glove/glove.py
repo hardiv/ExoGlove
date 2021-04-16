@@ -76,6 +76,7 @@ class Glove:
         self.bottom_thumb.throttle = multiplier*0.5
 
     def getDist(self):
+        print("Getting Distance...")
         # set Trigger to HIGH
         GPIO.output(GPIO_TRIGGER, True)
         # set Trigger after 0.01ms to LOW
@@ -87,8 +88,10 @@ class Glove:
         while GPIO.input(GPIO_ECHO) == 0:
             StartTime = time.time()
         # save time of arrival
+        print("Exited loop 1")
         while GPIO.input(GPIO_ECHO) == 1:
             StopTime = time.time()
+        print("Exited loop 2")
         # time difference between start and arrival
         TimeElapsed = StopTime - StartTime
         # multiply with the sonic speed (34300 cm/s)

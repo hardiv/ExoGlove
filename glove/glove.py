@@ -104,7 +104,9 @@ class Glove:
     def _haltAfter(self, num_secs):
         time.sleep(num_secs)
         self.top_fingers.throttle = 0
-
+        self.bottom_fingers.throttle = 0
+        self.top_thumb.throttle = 0
+        self.bottom_thumb.throttle = 0
 
 # Unit testing for hardware
 if __name__ == "__main__":

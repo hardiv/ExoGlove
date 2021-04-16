@@ -109,6 +109,7 @@ class Glove:
         self.top_thumb.throttle = 0
         self.bottom_thumb.throttle = 0
 
+
 # Unit testing for hardware
 if __name__ == "__main__":
     glove = Glove()
@@ -116,12 +117,7 @@ if __name__ == "__main__":
     glove.gripObject()
     print("Loosening")
     glove.relax()
-    try:
-        while True:
-            dist = glove.getDist()
-            print("Measured Distance = %.1f cm" % dist)
-            time.sleep(1)
-    # Reset by pressing CTRL + C
-    except KeyboardInterrupt:
-        print("Measurement stopped by User")
-        GPIO.cleanup()
+    # sensor
+    dist = glove.getDist()
+    print("Measured Distance = %.1f cm" % dist)
+    time.sleep(1)

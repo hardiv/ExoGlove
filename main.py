@@ -3,8 +3,6 @@ from glove import glove
 
 g = glove.Glove()
 
-grabbable_objects = ['Red', 'Green', 'Yellow', 'Not a']
-
 
 if __name__ == "__main__":
     print(isGripNeeded())

@@ -39,21 +39,18 @@ def classify(image_to_test):
 
 	# run the inference
 	prediction = model.predict(data)
-	red_confidence = prediction[0][0]
-	yellow_confidence = prediction[0][1]
-	green_confidence = prediction[0][2]
+	cup_confidence = prediction[0][0]
+	handle_confidence = prediction[0][1]
+	bottle_confidence = prediction[0][2]
 	other_confidence = prediction[0][3]
-
-	# print(red_confidence, yellow_confidence, green_confidence, other_confidence)
-
-	highest_confidence = max(red_confidence, green_confidence, yellow_confidence, other_confidence)
+	highest_confidence = max(cup_confidence, handle_confidence, bottle_confidence, other_confidence)
 
 	image_label = "Other"
-	if highest_confidence == red_confidence:
+	if highest_confidence == cup_confidence:
 		image_label = "Cup"
-	elif highest_confidence == green_confidence:
+	elif highest_confidence == handle_confidence:
 		image_label = "Handle"
-	elif highest_confidence == yellow_confidence:
+	elif highest_confidence == bottle_confidence:
 		image_label = "Bottle"
 
 	return image_label, highest_confidence

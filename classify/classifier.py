@@ -12,7 +12,7 @@ def classify(image_to_test):
 	np.set_printoptions(suppress=True)
 
 	# Load the model
-	model = tensorflow.keras.models.load_model('classify/converted_keras/keras_model.h5')
+	model = tensorflow.keras.models.load_model('converted_keras/keras_model.h5')
 
 	# Create the array of the right shape to feed into the keras model
 	# The 'length' or number of images you can put into the array is
@@ -39,9 +39,9 @@ def classify(image_to_test):
 
 	# run the inference
 	prediction = model.predict(data)
-	cup_confidence = prediction[0][0]
+	bottle_confidence = prediction[0][0]
 	handle_confidence = prediction[0][1]
-	bottle_confidence = prediction[0][2]
+	cup_confidence = prediction[0][2]
 	other_confidence = prediction[0][3]
 	highest_confidence = max(cup_confidence, handle_confidence, bottle_confidence, other_confidence)
 

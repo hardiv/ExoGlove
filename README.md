@@ -2,6 +2,9 @@
 
 Welcome to the home of the **GripPi** Codebase! This project is a glove exoskeleton powered by a Raspberry Pi, designed to assist stroke patients in gripping objects with the help of a predictive Computer Vision algorithm.
 
+![image](https://github.com/user-attachments/assets/e675d103-62e0-4768-9ae9-00afbe35fcd2)
+
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -61,11 +64,11 @@ For detailed usage instructions and tutorials, refer to the [Wiki](https://githu
 
 ## Hardware Requirements
 
-- Raspberry Pi (Model 3B+ or newer recommended)
+- Raspberry Pi Zero
 - IR sensor
 - Raspberry Pi Camera Module
 - Servo Motors
-- Motor Controller
+- Adafruit Motor Controller Bonnet
 - Glove
 - Ivy Grip Tape
 
